@@ -1,0 +1,36 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 7b187107f794bdd1c585e8123f910f1f6c2cb7abbf11ead8f036c9993768f5e2
+
+name:           calamtest
+version:        0.1.0.0
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+
+executable calamity-test-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_calamtest
+  hs-source-dirs:
+      app
+  ghc-options: -O2 -fplugin=Polysemy.Plugin -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , calamity
+    , di-polysemy
+    , generic-lens
+    , lens
+    , polysemy
+    , polysemy-plugin
+    , prometheus
+    , stm
+    , text
+    , text-show
+    , unordered-containers
+    , vector
+  default-language: Haskell2010
